@@ -17,7 +17,7 @@ Just open one of them and press play. They will automatically start racing!
 3) Increasing the scale of the car is expected to cause problems in the driving.
 
 # Approach to get this result:
-1) Each car contains a GameObject called "Raycasters" taht contains its raycasts. There are 6 raycasts in total per car. 2 are looking forward, 1 is left, 1 is right, 1 is up-left and the last one is up-right. Each of those raycasts calculates the distance to the wall and thus gives the car info about how to turn and how to reduce/increase the speed.
+1) Each car contains a GameObject called "Raycasters" that contains its raycasts. There are 6 raycasts in total per car. 2 are looking forward, 1 is left, 1 is right, 1 is up-left and the last one is up-right. Each of those raycasts calculates the distance to the wall and thus gives the car info about how to turn and how to reduce/increase the speed.
 2) The reason there are 2 forward raycasts is for calculating the angle of the wall in front so that it can know whether to turn left or right.
 3) Left, right, up-left, up-right raycasts are used to keep the car in the middle of the road. They work by trying to keep the distance between them the same. For example, if the distance to the left is 2 and the distance to the right is 1 then the car will try to turn a bit on the left in order to balance the difference of the distances.
 4) The speed of the car is determined by how small or big the forward distance is.
